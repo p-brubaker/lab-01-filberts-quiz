@@ -1,3 +1,5 @@
+  import { countsAsYes } from utils.js; 
+  
   // get the button element
 const launchQuiz = document.getElementById('click-me')
 
