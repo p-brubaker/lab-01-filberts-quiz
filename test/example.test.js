@@ -1,18 +1,22 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
+import { isYes } from '../utils.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+// expect can be called anything you want
+// its just a parameter
+test('should return true for yes-y strings', expect => {
+    const yesString = isYes('yes');
+    const yString = isYes('y');
+    const upperCaseString = isYes('YES');
+    expect.equal(yesString, true);
+    expect.equal(yString, true);
+    expect.equal(upperCaseString, true);
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
-});
+})
+
+test('should return false for non yes-y string', expect => {
+    const noString = isYes('no');
+    expect.equal(noString, false);
+})
