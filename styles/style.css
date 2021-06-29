@@ -111,3 +111,19 @@ footer {
     }
 
   }
+
+  section {
+    font-family: 'Hammersmith One', sans-serif;
+  }
+
+  body {
+     background-color: lightsteelblue;
+  }
+
+  button {
+      padding: 20px;
+      border: 5px solid darkslategray;
+      background-color: gainsboro;
+      border-radius: 5%;
+      margin-bottom: 10px;
+  }
