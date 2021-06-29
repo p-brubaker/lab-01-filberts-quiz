@@ -1,12 +1,10 @@
-  import { countsAsYes } from './utils.js'; 
+import { countsAsYes } from './utils.js'; 
   
-  // get the button element
 const launchQuiz = document.getElementById('click-me')
 const results = document.getElementById('results');
 
-  // add "click" event listener to the button
 launchQuiz.addEventListener('click', () => {
-    let userName = prompt('What is our name?');
+    let userName = prompt('What is your name?');
     let wantsQuiz = confirm('Do you want to start the quiz?');
     if (!wantsQuiz) {
       return
@@ -23,8 +21,4 @@ launchQuiz.addEventListener('click', () => {
       results.textContent = `Okay ${userName}, you got ${totalCorrect}/3 correct`;
     }
 })
-  //   confirm the user wants to start the quiz
-  //   if they do -- prompt for at least 3 questions and store the answer
-  //   for each answer, check if the user entered a correct value
-  //   track the number of correct answers
-  //   at the end of the quiz, update the results section with the number of correct answers
+  
