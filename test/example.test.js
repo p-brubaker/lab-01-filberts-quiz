@@ -14,9 +14,9 @@ test('should return true for yes-y strings', expect => {
     expect.equal(yString, true);
     expect.equal(upperCaseString, true);
 
-})
+});
 
 test('should return false for non yes-y string', expect => {
     const noString = isYes('no');
     expect.equal(noString, false);
-})
+});
