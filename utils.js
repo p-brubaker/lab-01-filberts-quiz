@@ -1,4 +1,8 @@
 export function countsAsYes(word){
-    // logic to determine if user input should count as a yes
-    // return true / false
+    let lowerCaseWord = word.toLowerCase();
+    if (lowerCaseWord[0] === 'y') {
+        return true;
+    } else {
+        return false;
+    }
 }
