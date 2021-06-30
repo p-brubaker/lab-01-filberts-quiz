@@ -18,6 +18,12 @@ launchQuiz.addEventListener('click', () => {
         let ans3 = prompt('Are roasted filberts the best kind of filbert?');
         if (countsAsYes(ans3)) totalCorrect++;
         alert('Quiz complete! Ready for your results?');
-        results.textContent = `Okay ${userName}, you got ${totalCorrect}/3 correct`;
+        if (totalCorrect === 3) {
+            results.textContent = `Congratulations ${userName}, you got ${Math.floor(totalCorrect / 3 * 100)}% correct. You know your filberts.`;
+            results.style.color = 'green';
+        } else {
+            results.textContent = `Okay ${userName}, you got ${Math.floor(totalCorrect / 3 * 100)}% correct. Maybe you're allergic.`;
+            results.style.color = 'red';
+        }
     }
 })
